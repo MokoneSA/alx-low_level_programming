@@ -1,14 +1,11 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - Entry point
- *
- * Prints alphabets in small letters
+ * print_alphabet - prints alphabet in small letters
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+void print_alphabet(void)
 {
 	int letter;
 
@@ -17,5 +14,4 @@ int main(void)
 		_putchar(letter);
 	}
 	_putchar ('\n');
-	return (0);
 }
