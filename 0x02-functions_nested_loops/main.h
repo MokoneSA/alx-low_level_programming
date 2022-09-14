@@ -15,6 +15,6 @@ void time_table(void);
 int add(int, int);
 void print_to_98(int n);
 void print_times_table(int n);
-int jack_bauer(void);
+void jack_bauer(void);
 
 #endif
