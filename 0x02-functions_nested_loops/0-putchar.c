@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * main - Entry point
@@ -9,9 +10,15 @@
  */
 int main(void)
 {
-	char name = "_putchar";
+	char name[10] = "_putchar";
 
-	putchar(name);
+	int i;
 
+
+	for (i = 0; i < 8; i++);
+	{
+		_putchar(name[i]);
+	}
+	_putchar(10);
 	return (0);
 }
