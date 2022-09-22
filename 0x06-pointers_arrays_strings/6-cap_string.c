@@ -2,32 +2,31 @@
 
 /**
  * cap_string - function that capitalize first character of a word
- * @str: string to capitalize
- * Return:returns the capitalized string
+ * @s: string to capitalize
+ *
+ * Return: the capitalized string
  */
-char *cap_string(char *str)
+char *cap_string(char *s)
 {
-		int index = 0;
+	int i, j;
+	char spe[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?',
+		'"', '(', ')', '{', '}'};
 
-		while (str[++index])
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		if (i == 0 && s[i] >= 'a' && s[i] <= 'z')
+			s[i] -= 32;
+
+		for (j = 0; j < 13; j++)
 		{
-			while (!(str[index] >= 'a' && str[index] <= 'z'))
-				index++;
-
-			if (str[index - 1] == ' ' ||
-				str[index - 1] == '\t' ||
-				str[index - 1] == '\n' ||
-				str[index - 1] == ',' ||
-				str[index - 1] == ';' ||
-				str[index - 1] == '.' ||
-				str[index - 1] == '!' ||
-				str[index - 1] == '?' ||
-				str[index - 1] == '"' ||
-				str[index - 1] == '(' ||
-				str[index - 1] == ')' ||
-				str[index - 1] == '{' ||
-				str[index - 1] == '}')
-			str[index] -= 32;
+			if (s[i] == spe[j])
+			{
+				if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+				{
+					s[i + 1] -= 32;
+				}
+			}
 		}
-	return (str);
+	}
+	return (s);
 }
