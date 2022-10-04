@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * print_rev - prints a string in reverse
@@ -17,4 +18,22 @@ void print_rev(char *s)
 	_putchar(s[index]);
 
 	_putchar('\n');
+}
+
+
+
+void print_rev(char *);
+
+/**
+ * main - check the code for Holberton School students.
+ * 
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char *str;
+
+	str = "Holberton!";
+	print_rev(str);
+	return (0);
 }
