@@ -3,7 +3,7 @@
 /**
  * strtow - splits a stirng into words
  * @str: string to be splitted
- * 
+ *
  * Return: pointer to the array of splitted words
  */
 
@@ -28,7 +28,7 @@ char **strtow(char *str)
 				{
 					while (temp < size)
 					{
-						split[j][temp] = str[(i - size) +temp];
+						split[j][temp] = str[(i - size) + temp];
 						temp++;
 					}
 					split[j][temp] = '\0';
