@@ -1,39 +1,33 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_rev - prints a string in reverse
  * @s: string to print
- *
- * Returns: 0.
  */
-
 void print_rev(char *s)
 {
-	int index;
+	int len = 0, index = 0;
 
-	for (index = 0; s[index] != '\0'; ++index)
+	len = _strlen(s);
 
-	for (--index; index >= 0; --index)
-	_putchar(s[index]);
+	for (index = len - 1; index >= 0; index--)
+		_putchar(s[index]);
 
 	_putchar('\n');
 }
 
-
-
-void print_rev(char *);
-
 /**
- * main - check the code for Holberton School students.
- * 
- * Return: Always 0.
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: returns lenght;
  */
-int main(void)
+int _strlen(char *s)
 {
-	char *str;
+	int count, inc;
 
-	str = "Holberton!";
-	print_rev(str);
-	return (0);
+	inc = 0;
+	for (count = 0; s[count] != '\0'; count++)
+		inc++;
+
+	return (inc);
 }
