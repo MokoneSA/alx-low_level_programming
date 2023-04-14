@@ -32,7 +32,7 @@ int interpolation_search(int *array, size_t size, int value)
 		}
 		else
 		{
-			pritnf(" = [%d}\n", array[pos]);)
+			printf(" = [%d}\n", array[pos]);
 		}
 
 		if (array[pos] == value)
